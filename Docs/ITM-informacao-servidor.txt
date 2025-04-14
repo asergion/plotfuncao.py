@@ -1,0 +1,54 @@
+Informações do  da ITM Networks
+
+Item	                    Detalhe
+Pacote de hospedagem	    hlp-hospedagem-linux-platinum
+Nome do servidor	    svcp2
+Versão do cPanel	    124.0 (build 33)
+Versão do Apache	    2.4.63
+Database Version	    10.6.21-MariaDB
+Arquitetura	            x86_64
+Sistema operacional	    linux
+
+IP compartilhado	    54.39.157.202
+Caminho para envio de email	/usr/sbin/sendmail
+Caminho para Perl	/usr/bin/perl
+Versão do Perl	5.26.3
+Versão do kernel	4.18.0-553.30.1.lve.el8.x86_64
+
+Informações do serviço
+Serviço	Detalhes	Status
+apache_php_fpm	up	“apache_php_fpm” is ok.
+clamd	up	“clamd” is ok.
+cpanel_php_fpm	up	“cpanel_php_fpm” is ok.
+cpanellogd	up	“cpanellogd” is ok.
+cpdavd	up	“cpdavd” is ok.
+cpsrvd	up	“cpsrvd” is ok.
+crond	up	“crond” is ok.
+dnsadmin	up	“dnsadmin” is ok.
+exim (4.98.1-2.cp118~el8)	up	“exim” is ok.
+ftpd	up	“ftpd” is ok.
+httpd (2.4.63)	up	“httpd” is ok.
+imap	up	“imap” is ok.
+ipaliases	up	“ipaliases” is ok.
+jetbackup5d	up	“jetbackup5d” is ok.
+jetmongod	up	“jetmongod” is ok.
+lmtp	up	“lmtp” is ok.
+mailman	up	“mailman” is ok.
+
+mysql (10.6.21-MariaDB)	up	“mysql” is ok.
+
+named	up	“named” is ok.
+nscd	up	“nscd” is ok.
+p0f	up	“p0f” is ok.
+pop	up	“pop” is ok.
+queueprocd	up	“queueprocd” is ok.
+rsyslogd	up	“rsyslogd” is ok.
+spamd	up	“spamd” is ok.
+sshd	up	“sshd” is ok.
+Server Load	3.51	“Server Load” is ok.
+CPU Count	8	“CPU Count” is ok.
+Memory Used	40.42%	“Memory Used” is ok.
+Swap	0.11%	“Swap” is ok.
+Disk / (/)	79%	“Disk / (/)” is ok.
+Disk /boot (/boot)	41%	“Disk /boot (/boot)” is ok.
+Disk /boot/efi (/boot/efi)	1%	“Disk /boot/efi (/boot/efi)” is ok.

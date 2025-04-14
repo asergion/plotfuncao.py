@@ -1,0 +1,89 @@
+Para plotar gráficos com funções lineares e quadráticas em Python, algumas bibliotecas são bastante populares e fáceis de usar. Aqui estão as principais:
+
+🧰 1. Matplotlib
+A biblioteca mais comum e poderosa para gráficos 2D em Python.
+
+Instalação:
+
+bash
+Copiar
+Editar
+pip install matplotlib
+Exemplo com função linear e quadrática:
+
+python
+Copiar
+Editar
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-10, 10, 400)  # cria um array de -10 a 10 com 400 pontos
+y_linear = 2*x + 3             # função linear: y = 2x + 3
+y_quadratic = x**2 - 4*x + 5   # função quadrática: y = x² - 4x + 5
+
+plt.plot(x, y_linear, label='y = 2x + 3')
+plt.plot(x, y_quadratic, label='y = x² - 4x + 5')
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.grid(True)
+plt.legend()
+plt.title("Funções Linear e Quadrática")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+📊 2. Seaborn
+Baseada em Matplotlib, com gráficos mais estilizados, mas menos usada para funções matemáticas diretas. Funciona melhor com DataFrames do pandas.
+
+🌐 3. Plotly
+Gráficos interativos, excelente para dashboards e apresentações.
+
+Instalação:
+
+bash
+Copiar
+Editar
+pip install plotly
+Exemplo básico:
+
+python
+Copiar
+Editar
+import plotly.graph_objects as go
+import numpy as np
+
+x = np.linspace(-10, 10, 400)
+y = x**2 - 4*x + 5
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='y = x² - 4x + 5'))
+fig.show()
+⚙️ 4. SymPy (para visualização simbólica + gráfica)
+Boa se você quiser plotar funções simbólicas e fazer análise matemática (derivadas, raízes, etc.).
+
+Instalação:
+
+bash
+Copiar
+Editar
+pip install sympy
+Exemplo com plot simbólico:
+
+python
+Copiar
+Editar
+from sympy import symbols, plot
+
+x = symbols('x')
+f1 = 2*x + 3
+f2 = x**2 - 4*x + 5
+
+plot(f1, f2, (x, -10, 10), legend=True)
+Conclusão
+Biblioteca	Melhor para...
+Matplotlib	Gráficos padrão, funções matemáticas
+Plotly	Gráficos interativos
+SymPy	Manipulação simbólica + visualização
+Seaborn	Gráficos estatísticos com dados de tabela
+Se você está lidando com funções matemáticas puras (reta, parábola etc.), o combo NumPy + Matplotlib é a escolha mais direta e poderosa. Se quiser interatividade, vá de Plotly.
+
+Se quiser, posso te ajudar a montar um script com menu para escolher o tipo de função e visualizar o gráfico!

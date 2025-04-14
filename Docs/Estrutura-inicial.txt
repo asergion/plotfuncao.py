@@ -1,0 +1,15 @@
+plotfuncao.api/
+├── View/
+│   └── app_streamlit.py         # A interface
+│
+├── Controller/
+│   └── controller.py
+│
+├── Model/
+│   └── model.py
+│
+├── main.py
+├── .env
+├── requirements.txt
+├── README.md
+├── run_streamlit.bat
