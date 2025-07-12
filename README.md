@@ -64,13 +64,17 @@ Você pode fazer o deploy desta aplicação diretamente no Google Cloud Run a pa
     O comando abaixo irá construir a imagem Docker usando o Cloud Build, enviá-la para o Artifact Registry e fazer o deploy no Cloud Run.
     ```bash
     # Substitua 'sua-regiao' por uma região de sua preferência (ex: us-central1, southamerica-east1)
-    gcloud run deploy plotfuncao-service --source . --region sua-regiao --allow-unauthenticated --port 8501
+    gcloud run deploy plotfuncao-service --source . --region sua-regiao --allow-unauthenticated --port 8000
     ```
     - `plotfuncao-service`: Nome do seu serviço no Cloud Run.
     - `--source .`: Usa o diretório atual como fonte.
     - `--region`: Região onde o serviço será hospedado.
     - `--allow-unauthenticated`: Permite que qualquer pessoa acesse a URL pública da aplicação.
     - `--port 8000`: Informa ao Cloud Run que seu container escuta na porta 8501.
+
+4. Deploy feito em: 2025-07-12
+
+https://pyplotfuncao-service-860451215437.southamerica-east1.run.app
 
 ## Getting started
 
