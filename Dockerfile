@@ -24,8 +24,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expõe a porta padrão do Streamlit para que possamos acessá-la de fora do container
-EXPOSE 8501
+EXPOSE 8000
 
 # Comando para executar a aplicação quando o container iniciar.
 # Usamos --server.address=0.0.0.0 para que o Streamlit seja acessível externamente.
-CMD ["streamlit", "run", "View/app_streamlit.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "View/app_streamlit.py", "--server.port=8000", "--server.address=0.0.0.0"]
