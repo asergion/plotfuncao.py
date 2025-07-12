@@ -13,6 +13,7 @@ deactivate
 
 ## Requirements
 pip freeze > requirements.txt
+
 #pip install streamlit matplotlib numpy
 
 ## Getting started
