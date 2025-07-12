@@ -22,7 +22,7 @@ Você também pode executar a aplicação usando Docker.
 
 2.  **Execute o container:**
     ```bash
-    docker run -p 8501:8501 plotfuncao
+    docker run -p 8000:8000 plotfuncao
     ```
 
 ## Docker Compose (Recomendado para Desenvolvimento)
@@ -44,15 +44,33 @@ O Docker Compose simplifica a execução da aplicação, especialmente durante o
 pip freeze > requirements.txt
 
 #pip install streamlit matplotlib numpy
-
-## Autenticação no Google Cloud
-
-```sh
-gcloud auth login
-gcloud config set project PROJECT_ID
-gcloud run deploy --port=8501
-````
-
+ 
+## Deploy no Google Cloud Run
+ 
+Você pode fazer o deploy desta aplicação diretamente no Google Cloud Run a partir do seu código-fonte.
+ 
+1.  **Autenticação (faça apenas uma vez):**
+    ```bash
+    gcloud auth login
+    ```
+ 
+2.  **Configure seu projeto:**
+    ```bash
+    # Substitua SEU_PROJECT_ID pelo ID do seu projeto no Google Cloud
+    gcloud config set project SEU_PROJECT_ID
+    ```
+ 
+3.  **Execute o deploy:**
+    O comando abaixo irá construir a imagem Docker usando o Cloud Build, enviá-la para o Artifact Registry e fazer o deploy no Cloud Run.
+    ```bash
+    # Substitua 'sua-regiao' por uma região de sua preferência (ex: us-central1, southamerica-east1)
+    gcloud run deploy plotfuncao-service --source . --region sua-regiao --allow-unauthenticated --port 8501
+    ```
+    - `plotfuncao-service`: Nome do seu serviço no Cloud Run.
+    - `--source .`: Usa o diretório atual como fonte.
+    - `--region`: Região onde o serviço será hospedado.
+    - `--allow-unauthenticated`: Permite que qualquer pessoa acesse a URL pública da aplicação.
+    - `--port 8000`: Informa ao Cloud Run que seu container escuta na porta 8501.
 
 ## Getting started
 

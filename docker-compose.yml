@@ -10,9 +10,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # Mapeia a porta 8501 do host para a porta 8501 do container
+    # Mapeia a porta 8000 do host para a porta 8000 do container
     ports:
-      - "8501:8501"
+      - "8000:8000"
     # Monta o diretório atual no diretório /app do container.
     # Isso permite que alterações no código local sejam refletidas
     # instantaneamente no container, sem precisar reconstruir a imagem (ótimo para desenvolvimento).
