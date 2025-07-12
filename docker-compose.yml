@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    # Nome da imagem que será construída
+    image: plotfuncao-app
+    # Nome do container quando estiver em execução
+    container_name: plotfuncao_container
+    # Instruções para construir a imagem a partir do Dockerfile no diretório atual
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Mapeia a porta 8501 do host para a porta 8501 do container
+    ports:
+      - "8501:8501"
+    # Monta o diretório atual no diretório /app do container.
+    # Isso permite que alterações no código local sejam refletidas
+    # instantaneamente no container, sem precisar reconstruir a imagem (ótimo para desenvolvimento).
+    volumes:
+      - .:/app

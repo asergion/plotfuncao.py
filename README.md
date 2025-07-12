@@ -11,10 +11,48 @@ streamlit run View/app_streamlit.py
 
 deactivate
 
+## Docker
+
+Você também pode executar a aplicação usando Docker.
+
+1.  **Construa (build) a imagem Docker:**
+    ```bash
+    docker build -t plotfuncao .
+    ```
+
+2.  **Execute o container:**
+    ```bash
+    docker run -p 8501:8501 plotfuncao
+    ```
+
+## Docker Compose (Recomendado para Desenvolvimento)
+
+O Docker Compose simplifica a execução da aplicação, especialmente durante o desenvolvimento, pois reflete as alterações do código em tempo real no container.
+
+1.  **Suba o serviço:**
+    ```bash
+    docker-compose up --build
+    ```
+    (Use `--build` na primeira vez ou sempre que alterar o `Dockerfile` ou `requirements.txt`).
+
+2.  **Para parar o serviço**, pressione `Ctrl+C` no terminal e depois execute para remover o container:
+    ```bash
+    docker-compose down
+    ```
+
 ## Requirements
 pip freeze > requirements.txt
 
 #pip install streamlit matplotlib numpy
+
+## Autenticação no Google Cloud
+
+```sh
+gcloud auth login
+gcloud config set project PROJECT_ID
+gcloud run deploy --port=8501
+````
+
 
 ## Getting started
 
