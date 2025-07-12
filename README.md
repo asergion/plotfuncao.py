@@ -70,7 +70,7 @@ Você pode fazer o deploy desta aplicação diretamente no Google Cloud Run a pa
     - `--source .`: Usa o diretório atual como fonte.
     - `--region`: Região onde o serviço será hospedado.
     - `--allow-unauthenticated`: Permite que qualquer pessoa acesse a URL pública da aplicação.
-    - `--port 8000`: Informa ao Cloud Run que seu container escuta na porta 8501.
+    - `--port 8000`: Informa ao Cloud Run que seu container escuta na porta 8000.
 
 4. Deploy feito em: 2025-07-12
 
